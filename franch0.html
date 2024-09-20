@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learn French</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-image: url('hct.jpg.jpg'); /* Add the path to your background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 5px 0 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #2e8b57; /* Dark Olive Green */
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f0f0f0;
+        }
+
+        /* Section Styles */
+        section {
+            background-color: white;
+            padding: 30px 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease;
+        }
+
+        section.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            color: #3d9970; /* Olive Green */
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        button {
+            padding: 12px 20px;
+            background-color: #3d9970; /* Olive Green */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2e8b57; /* Dark Olive Green */
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        /* Image Styles */
+        img {
+            width: 200px;
+            height: 200px;
+            float: right;
+            margin-left: 10px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #3d9970; /* Olive Green */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 20px 15px;
+                margin: 15px auto;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="/website/hct.jpg" alt="HCT Logo" class="logo">
+         <h1>Learn French</h1>
+        <p>Explore the language, culture, and more!
+        </p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#phrases">Basic Phrases</a>
+        <a href="#vocabulary">Vocabulary</a>
+        <a href="#grammar">Grammar Tips</a>
+        <a href="#culture">French Culture</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About Us</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome</h2>
+        <p>Bonjour! Whether you're a beginner or looking to polish your skills, this site offers a diverse range of resources to help you learn French. Dive into the language, explore the rich culture, and practice with interactive exercises!</p>
+    </section>
+
+    <section id="phrases">
+        <h2>Basic French Phrases</h2>
+        <ul>
+            <li><strong>Bonjour:</strong> Hello</li>
+            <li><strong>Merci:</strong> Thank you</li>
+            <li><strong>Oui:</strong> Yes</li>
+            <li><strong>Non:</strong> No</li>
+            <li><strong>Comment ça va?:</strong> How are you?</li>
+            <li><strong>Au revoir:</strong> Goodbye</li>
+            <li><strong>S'il vous plaît:</strong> Please</li>
+            <li><strong>Excusez-moi:</strong> Excuse me</li>
+        </ul>
+    </section>
+
+    <section id="vocabulary">
+        <h2>Basic Vocabulary</h2>
+        <ul>
+            <li><strong>Le chat:</strong> The cat</li>
+            <li><strong>La maison:</strong> The house</li>
+            <li><strong>L'école:</strong> The school</li>
+            <li><strong>La voiture:</strong> The car</li>
+            <li><strong>Le livre:</strong> The book</li>
+            <li><strong>Le pain:</strong> The bread</li>
+            <li><strong>L'eau:</strong> The water</li>
+            <li><strong>La musique:</strong> The music</li>
+        </ul>
+    </section>
+
+    <section id="grammar">
+        <h2>French Grammar Tips</h2>
+        <p>Understanding French grammar is essential for mastering the language. Here are a few tips:</p>
+        <ul>
+            <li><strong>Nouns & Articles:</strong> French nouns have genders (masculine or feminine). Learn the gender of each noun with its article, e.g., <i>le</i> (masculine), <i>la</i> (feminine).</li>
+            <li><strong>Verb Conjugation:</strong> Regular verbs follow a pattern, but watch out for irregular verbs. E.g., <i>manger</i> (to eat): je mange, tu manges, il/elle mange...</li>
+            <li><strong>Sentence Structure:</strong> Typically follows Subject-Verb-Object order, e.g., <i>Je mange une pomme</i> (I eat an apple).</li>
+        </ul>
+    </section>
+
+    <section id="culture">
+        <h2>Explore French Culture</h2>
+        <p>Learning French is more than just the language. Immerse yourself in the culture!</p>
+        <ul>
+            <li><strong>Cuisine:</strong> French cuisine is world-renowned. Try cooking a classic dish like <i>ratatouille</i> or <i>coq au vin</i>.
+                <img src="path-to-cuisine-image.jpg" alt="French Cuisine"></li>
+            <li><strong>Music:</strong> Listen to French artists like Edith Piaf, Stromae, and Angèle to get a feel for the language.
+                <img src="path-to-music-image.jpg" alt="French Music"></li>
+            <li><strong>Festivals:</strong> Learn about famous French festivals like Bastille Day and the Cannes Film Festival.</li>
+            <li><strong>Travel:</strong> Explore iconic places in France, from the Eiffel Tower in Paris to the lavender fields of Provence.</li>
+        </ul>
+     </section>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn French - Exercises</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #3d9970; /* Olive Green */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 5px 0 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #2e8b57; /* Dark Olive Green */
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f0f0f0;
+        }
+
+        /* Section Styles */
+        section {
+            background-color: white;
+            padding: 30px 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #3d9970; /* Olive Green */
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        select, input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus, input[type="text"]:focus {
+            border-color: #3d9970; /* Olive Green */
+            outline: none;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #3d9970; /* Olive Green */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2e8b57; /* Dark Olive Green */
+        }
+
+        p.result {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #3d9970; /* Olive Green */
+            margin-top: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #3d9970; /* Olive Green */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 20px 15px;
+                margin: 15px auto;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <section id="exercises">
+        <h2>Interactive Exercises</h2>
+
+        <!-- Matching Exercise -->
+        <h3>Match the Phrases</h3>
+        <p>Match the French phrases with their English translations:</p>
+        
+        <form id="matchingExercise">
+            <label for="bonjour">Bonjour:</label>
+            <select id="bonjour">
+                <option value="">--Select--</option>
+                <option value="1">Hello</option>
+                <option value="2">Goodbye</option>
+                <option value="3">Thank you</option>
+            </select>
+
+            <label for="merci">Merci:</label>
+            <select id="merci">
+                <option value="">--Select--</option>
+                <option value="1">Please</option>
+                <option value="2">Thank you</option>
+                <option value="3">Excuse me</option>
+            </select>
+
+            <label for="au_revoir">Au revoir:</label>
+            <select id="au_revoir">
+                <option value="">--Select--</option>
+                <option value="1">Goodbye</option>
+                <option value="2">Hello</option>
+                <option value="3">Yes</option>
+            </select>
+
+            <button type="button" onclick="checkMatchingAnswers()">Submit</button>
+        </form>
+        
+        <p id="matchingResult" class="result"></p>
+        
+        <!-- Fill-in-the-Blank Exercise -->
+        <h3>Fill in the Blanks</h3>
+        <p>Fill in the blanks with the correct French words:</p>
+
+        <form id="fillBlankExercise">
+            <label for="q1">1. _______ (Hello), comment ça va? </label>
+            <input type="text" id="q1">
+
+            <label for="q2">2. Merci beaucoup, _______ (please). </label>
+            <input type="text" id="q2">
+
+            <label for="q3">3. _______ (Goodbye), à bientôt! </label>
+            <input type="text" id="q3">
+
+            <button type="button" onclick="checkFillBlankAnswers()">Submit</button>
+        </form>
+
+        <p id="fillBlankResult" class="result"></p>
+    </section>
+
+
+    <script>
+    // JavaScript for Matching Exercise
+    function checkMatchingAnswers() {
+        const answers = {
+            bonjour: "1", // Hello
+            merci: "2",   // Thank you
+            au_revoir: "1" // Goodbye
+        };
+
+        let score = 0;
+
+        if (document.getElementById("bonjour").value === answers.bonjour) {
+            score++;
+        }
+        if (document.getElementById("merci").value === answers.merci) {
+            score++;
+        }
+        if (document.getElementById("au_revoir").value === answers.au_revoir) {
+            score++;
+        }
+
+        const totalQuestions = Object.keys(answers).length;
+        const resultMessage = `You scored ${score} out of ${totalQuestions}!`;
+
+        document.getElementById("matchingResult").textContent = resultMessage;
+    }
+
+    // JavaScript for Fill-in-the-Blank Exercise
+    function checkFillBlankAnswers() {
+        const answers = {
+            q1: "Bonjour",
+            q2: "s'il vous plaît",
+            q3: "Au revoir"
+        };
+
+        let score = 0;
+
+        if (document.getElementById("q1").value.trim().toLowerCase() === answers.q1.toLowerCase()) {
+            score++;
+        }
+        if (document.getElementById("q2").value.trim().toLowerCase() === answers.q2.toLowerCase()) {
+            score++;
+        }
+        if (document.getElementById("q3").value.trim().toLowerCase() === answers.q3.toLowerCase()) {
+            score++;
+        }
+
+        const totalQuestions = Object.keys(answers).length;
+        const resultMessage = `You scored ${score} out of ${totalQuestions}!`;
+
+        document.getElementById("fillBlankResult").textContent = resultMessage;
+    }
+    </script>
+    
+</body>
+</html>
+
+    <section id="resources">
+        <h2>Additional Resources</h2>
+        <p>Here are some useful resources for further learning:</p>
+        <ul>
+            <li><a href="https://www.duolingo.com/course/fr/en/Learn-French" target="_blank">Duolingo</a></li>
+            <li><a href="https://www.busuu.com/en/course/learn-french-online" target="_blank">Busuu</a></li>
+            <li><a href="https://www.memrise.com/course/2021571/learn-french/" target="_blank">Memrise</a></li>
+            <li><a href="https://www.bbc.co.uk/languages/french/" target="_blank">BBC French</a></li>
+        </ul>
+    </section>
+</body>
+</html>
+<section id="About us">
+    <h2>A little thing about us</h2>
+    <p>This website was created to help learn the frunch language </p>
+    <li> the category for this section is:AI Tools for Academic Excellence:Leveraging Technology for Success:<br>the second section Creation of an AI-powered language learning platform (App or Webpage)</li>
+    <li>this website was created mainly by HTML and CSS for the the illstration and JavaScript for the exiracius </li>
+    <li>My name is :Afra rashed ID 460516 I'm an electric eingginer at HCT Aldannah campus </li> 
+
+        <li><strong>Excusez-moi:</strong> Excuse me</li>
+    
+</section>
+    <footer>
+        <p>&copy; 2024 Learn French. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll Animation for Sections
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add('in-view');
+                }
+            });
+        });
+
+        // Simple form validation for the exercises
+        const form = document.getElementById('matchingExercise');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Exercise submitted!');
+        });
+    </script>
+
+
+</body>
+</html>
+
